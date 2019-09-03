@@ -1,5 +1,5 @@
 # MWA Homework 4 - NodeJS 03
-## Exercise 01
+## Exercise
 Create a **Reactive HTTP server** that serves simple `.txt` files, where the filename is passed in the request as query parameter as following: `http://localhost:4000/?filename=path/to/my/file.txt`  
   
 Reading the file should be in a separate child process, as following:  
