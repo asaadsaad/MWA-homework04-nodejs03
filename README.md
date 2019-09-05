@@ -1,6 +1,6 @@
 # MWA Homework 4 - NodeJS 03
 ## Exercise
-Create a **Reactive HTTP server** that serves simple `.txt` files, where the filename is passed in the request as query parameter as following: `http://localhost:4000/?filename=path/to/my/file.txt`  
+Create a **Reactive HTTP server** that receives a number passed in the request as query parameter as following: `http://localhost:4000/?n=10` and returns the Fibonacci number of `n`.  
+**Example**: `?n=10` should return a `JSON` object: `{fib: 55}`  
   
-Reading the file should be in a separate child process, as following:  
-*From the main process, send the `filename` (after parsing `req.url`) to the child process to start reading the file in chunks as stream, send every chunk back to the main process and to the response, once the reading stream emits "end" then you should send a signal to the main process to end the response and kill the child process. For more help check the [stream API details](https://nodejs.org/api/stream.html)*
+**Note:** Calculating Fibonacci is considered an intense CPU work, design your code so you don't block the main event-loop while Fibonacci is being calculated in `V8` JS Engine of the master process. 
