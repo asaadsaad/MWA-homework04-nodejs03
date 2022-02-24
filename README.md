@@ -13,4 +13,4 @@ The previous route returns a JSON object with the following structure:
   ...]
 ```
   
-**Note:** Node does not have `fetch()` in the current stable release, you may use the native `http` core module which has `get()` method, or one of the third-party packages like `request`, `axios`, `got`, or `superagent`. 
+**Note:** Node does not have `fetch()` in the current stable release, you may use the native `http` core module which has `get()` or `request()` methods, or one of the third-party packages like `request`, `axios`, `got`, or `superagent`. 
