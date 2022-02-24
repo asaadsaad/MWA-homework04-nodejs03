@@ -1,6 +1,16 @@
 # MWA Homework 4 - NodeJS 03
 ## Exercise
-Create an **HTTP server** that receives a number passed in the request as query parameter as following: `http://localhost:4000/?n=10` and returns a `JSON` object contains the Fibonacci number of `n`.  
-**Example**: `?n=10` should return a `JSON` object: `{fib: 55}`  
+Create an **HTTP server** that receives a request to the following route: `http://localhost:4000/posts?filterBy=id,title` and is supposed to do an intense CPU work, this work would block the main event-loop of the master process. 
   
-**Note:** Calculating Fibonacci is considered an intense CPU work, design your code so it does not block the main event-loop of the master process. 
+The route would start a child-process and fetch a JSON object from a third-party service `https://jsonplaceholder.typicode.com/posts`, it filters the response of 100 posts based on the query parameters passed to the route, and passes the filtered results back to the main process.  
+  
+The previous route returns a JSON object with the following structure:
+```json
+  [{
+    "id": 1,
+    "title": "doloribus ad provident suscipit at",
+  },
+  ...]
+```
+  
+**Note:** Node does not have `fetch()` in the current stable release, you may use the native `http` core module which has `get()` method, or one of the third-party packages like `request`, `axios`, or `superagent`. 
