@@ -1,4 +1,4 @@
-# MWA Homework 4 - NodeJS 03
+# MWA Homework - NPM and Scalability
 ## Exercise
 Create an **HTTP server** that receives a request to the following route: `http://localhost:4000/posts?return=id,title` and is supposed to do an intensive CPU work, this work would block the main event-loop of the master process. 
   
