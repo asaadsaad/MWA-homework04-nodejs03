@@ -4,6 +4,3 @@ Create a web server that may receive a GET request to: `http://localhost:3000?fa
 ```json
 { "factorial": { "input": 3, "output": 6 } }
 ```
-
-**Note: Remember to add `node_modules` folder to your `.gitignore` file. You should only push your code along with `package.json` and `package-lock.json`**
-
