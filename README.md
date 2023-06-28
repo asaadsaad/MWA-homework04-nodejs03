@@ -6,5 +6,5 @@ Update yesterday's homework and use the child process API to execute any CPU-int
   
 ## Answer the following Questions
 1. Explain in detail Node thread system?
-2. What is the best way to handle I/O intensive tasks in Node?
-3. What is the best way to handle CPU-intensive tasks in Node?
+2. What is the best way to handle any custom I/O intensive tasks in Node?
+3. What is the best way to handle any custom CPU-intensive tasks in Node?
